@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_marginVertical="16dp"
-    tools:context=".Login_Page">
+    tools:context=".LoginPage">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/view"
