@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <VideoView
+        android:id="@+id/videoview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:translationY="-10dp"
+        android:translationX="20dp"
+        android:src="@drawable/logo"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutCompat"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#99000000"
+        android:gravity="bottom|center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:layout_gravity="right"
+            android:layout_marginHorizontal="38dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="15dp"
+            android:orientation="horizontal"
+            android:text="Travel Route Guide"
+            android:textColor="#ffff"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:layout_gravity="right"
+            android:layout_marginHorizontal="38dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="20dp"
+            android:orientation="horizontal"
+            android:text="어디로 가야할지 모를때 \n   필요한 여행 경로 추천"
+            android:textColor="#ffff"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/bar"
+            android:layout_width="match_parent"
+            android:layout_height="0.7dp"
+            android:layout_marginHorizontal="38dp"
+            android:layout_marginBottom="20dp"
+            android:background="#979797"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/login" />
+
+        <android.widget.Button
+            android:id="@+id/kakao_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/kakao_login_button"
+            android:drawableLeft="@drawable/kakao_button"
+            android:gravity="center"
+            android:paddingHorizontal="100dp"
+            android:text="카카오로 시작하기"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:layout_marginRight="50dp"
+            android:gravity="left"
+            android:textSize="20dp"
+            android:orientation="horizontal"
+            android:text="로그인"
+            android:textColor="#ffff"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:layout_marginLeft="50dp"
+            android:fontFamily="sans-serif"
+            android:gravity="right"
+            android:textSize="20dp"
+            android:orientation="horizontal"
+            android:text="회원가입"
+            android:textColor="#ffff"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

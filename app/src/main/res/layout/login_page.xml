@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginVertical="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="27dp"
+            android:layout_height="21dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="34dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/left_arrow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="132dp"
+            android:layout_height="67dp"
+            android:layout_marginTop="105dp"
+            android:layout_marginBottom="39dp"
+            android:gravity="center"
+            android:text="TRG"
+            android:textColor="#ff000000"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/username"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="sans-serif"
+            android:text="이메일 주소"
+            android:textColor="#56B4D3"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/username"
+            app:layout_constraintStart_toStartOf="@+id/username" />
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="212dp"
+            android:autofillHints="string/prompt_email"
+            android:background="@drawable/login_input"
+            android:hint="ex@email.com"
+            android:inputType="textEmailAddress"
+            android:paddingHorizontal="22dp"
+            android:paddingVertical="12dp"
+            android:selectAllOnFocus="true"
+            android:textSize="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="비밀번호"
+            android:layout_marginBottom="10dp"
+            android:textColor="#56B4D3"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/password"
+            app:layout_constraintStart_toStartOf="@+id/password" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="56dp"
+            android:autofillHints="string/prompt_email"
+            android:background="@drawable/login_input"
+            android:hint="ex@email.com"
+            android:inputType="textEmailAddress"
+            android:paddingHorizontal="22dp"
+            android:paddingVertical="12dp"
+            android:selectAllOnFocus="true"
+            android:textSize="12dp"
+            app:layout_constraintTop_toBottomOf="@+id/username"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:layout_marginTop="67dp"
+            android:fontFamily="sans-serif"
+            android:text="새로운 계정 만들기"
+            android:textColor="#56B4D3"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/login"
+            app:layout_constraintEnd_toEndOf="@+id/login"
+            app:layout_constraintTop_toBottomOf="@+id/password" />
+
+        <android.widget.Button
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="90dp"
+            android:layout_marginBottom="54dp"
+            android:background="@drawable/login_button"
+            android:text="LOGIN"
+            android:textColor="#ffffff"
+            app:layout_constraintBottom_toBottomOf="@id/bar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/password"
+            app:layout_constraintVertical_bias="0.2" />
+
+        <View
+            android:id="@+id/bar"
+            android:layout_width="match_parent"
+            android:layout_height="0.7dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="52dp"
+            android:background="#979797"
+            app:layout_constraintTop_toBottomOf="@+id/login"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <android.widget.Button
+            android:id="@+id/kakao_login"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginHorizontal="106dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/kakao_login_button"
+            android:drawableLeft="@drawable/kakao_button"
+            android:paddingHorizontal="30dp"
+            android:text="카카오로 시작하기"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bar"
+            tools:layout_editor_absoluteX="105dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
