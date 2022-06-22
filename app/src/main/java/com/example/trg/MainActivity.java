@@ -2,21 +2,26 @@ package com.example.trg;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.VideoView;
+
+import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
 
     VideoView videoView;
+    TextView textView;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getSupportActionBar().hide();
 
         videoView = findViewById(R.id.videoview);
         Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.main);
@@ -27,6 +32,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onPrepared(MediaPlayer mp) {
                 mp.setLooping(true);
+            }
+        });
+
+        textView=(TextView)findViewById(R.id.txt_login);
+        textView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this , Login_Page.class);
+                startActivity(intent);
             }
         });
     }
@@ -54,5 +68,7 @@ public class MainActivity extends AppCompatActivity {
         videoView.stopPlayback();
         super.onDestroy();
     }
+
+
 
 }

@@ -4,7 +4,8 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_marginVertical="16dp">
+    android:layout_marginVertical="16dp"
+    tools:context=".Login_Page">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/view"
@@ -128,39 +129,11 @@
             android:background="@drawable/login_button"
             android:text="LOGIN"
             android:textColor="#ffffff"
-            app:layout_constraintBottom_toBottomOf="@id/bar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.687"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/password"
             app:layout_constraintVertical_bias="0.2" />
-
-        <View
-            android:id="@+id/bar"
-            android:layout_width="match_parent"
-            android:layout_height="0.7dp"
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginTop="54dp"
-            android:background="#979797"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/login" />
-
-        <android.widget.Button
-            android:id="@+id/kakao_login"
-            android:layout_width="match_parent"
-            android:layout_height="54dp"
-            android:layout_marginHorizontal="106dp"
-            android:background="@drawable/kakao_login_button"
-            android:drawableLeft="@drawable/kakao_button"
-            android:paddingHorizontal="25dp"
-            android:text="카카오로 시작하기"
-            android:textSize="16dp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/bar" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
