@@ -3,5 +3,6 @@
     <item
         android:drawable="@drawable/kakaotalk"
         android:width="15dp"
-        android:height="15dp" />
+        android:height="15dp"
+        />
 </layer-list>
