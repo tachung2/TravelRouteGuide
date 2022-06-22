@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:id="@+id/map_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearBox1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/basic_style"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="30dp"
+            android:paddingHorizontal="10dp">
+
+            <ImageButton
+                android:id="@+id/menuButton"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_menu"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/linearBox1"
+                app:layout_constraintTop_toTopOf="@+id/linearBox1" />
+
+            <EditText
+                android:id="@+id/searchText"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="33dp"
+                android:padding="5dp"
+                android:layout_height="54dp"
+                android:background="@null"
+                android:gravity="center|left"
+                android:textSize="16dp"
+                android:hint="원하시는 지역을 입력해주세요"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/searchButton"
+                app:layout_constraintStart_toEndOf="@+id/menuButton"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/searchButton"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_search"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="@+id/linearBox1"
+            app:layout_constraintTop_toBottomOf="@+id/linearBox1">
+
+            <Switch
+                android:id="@+id/myScheduleButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="내 일정"
+                android:textSize="16dp" />
+
+            <android.widget.Button
+                android:id="@+id/wishPlaceButton"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:paddingHorizontal="10dp"
+                android:text="  찜한 장소"
+                android:textStyle="bold"
+                android:drawableLeft="@drawable/empty_heart_button"
+                android:background="@drawable/basic_style"
+                android:textSize="16dp"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="30dp"
+            android:paddingVertical="10dp"
+            android:background="@drawable/basic_style"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="@+id/map_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <android.widget.Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="매거진"
+                android:textStyle="bold"
+                android:drawableTop="@drawable/magazine_button"
+                android:background="@drawable/button_ripple"
+                style="?android:attr/borderlessButtonStyle"/>
+
+            <android.widget.Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="가이드"
+                android:textStyle="bold"
+                android:drawableTop="@drawable/guide_button"
+                android:background="@drawable/button_ripple"
+                style="?android:attr/borderlessButtonStyle"/>
+
+            <android.widget.Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="주변탐색"
+                android:textStyle="bold"
+                android:drawableTop="@drawable/search_pin_button"
+                android:background="@drawable/button_ripple"
+                style="?android:attr/borderlessButtonStyle"/>
+
+            <android.widget.Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="여행일정"
+                android:textStyle="bold"
+                android:drawableTop="@drawable/travel_pin_button"
+                android:background="@drawable/button_ripple"
+                style="?android:attr/borderlessButtonStyle"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
