@@ -114,4 +114,5 @@
     <orderEntry type="library" scope="TEST" name="Gradle: com.kakao.sdk:v2-link:2.10.0@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.kakao.sdk:v2-navi:2.10.0@aar" level="project" />
   </component>
+  <component name="TestModuleProperties" production-module="TravelRouteGuide.app.main" />
 </module>
