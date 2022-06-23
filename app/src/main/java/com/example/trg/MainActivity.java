@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
     VideoView videoView;
     TextView login_textView;
     TextView signup_textView;
-    android.widget.Button login_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
