@@ -14,7 +14,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb8f8162-eb0e-4e65-84e7-c2f263117a81" name="Changes" comment="commit">
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/TravelRouteGuide.app.androidTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/TravelRouteGuide.app.androidTest.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/TravelRouteGuide.app.unitTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/TravelRouteGuide.app.unitTest.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,27 +32,17 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="layoutResourceFile" />
         <option value="Class" />
-        <option value="resourceFile" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="middle" />
+        <entry key="$PROJECT_DIR$" value="login" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GitSEFilterConfiguration">
-    <file-type-list>
-      <filtered-out-file-type name="LOCAL_BRANCH" />
-      <filtered-out-file-type name="REMOTE_BRANCH" />
-      <filtered-out-file-type name="TAG" />
-      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
-    </file-type-list>
   </component>
   <component name="ProjectId" id="2AvihohUfAW4lCh1tt5BUBTHxA6" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -63,16 +55,16 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="cidr.known.project.marker" value="true" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/java/com/example/trg" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/values" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/xml" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="show.do.not.copy.http.proxy.settings.to.gradle" value="true" />
   </component>
   <component name="Push.Settings">
     <force-push-targets>
       <force-push-target remote-path="origin" branch="middle" />
-      <force-push-target remote-path="origin" branch="register" />
     </force-push-targets>
   </component>
   <component name="RecentsManager">
@@ -80,11 +72,11 @@
       <recent name="com.example.trg" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\tachung\AndroidStudioProjects\TravelRouteGuide\app\src\main\java\com\example\trg" />
-      <recent name="C:\Users\tachung\AndroidStudioProjects\TravelRouteGuide\app\src\main\jniLibs" />
-      <recent name="C:\Users\tachung\AndroidStudioProjects\TravelRouteGuide\app" />
-      <recent name="C:\Users\tachung\AndroidStudioProjects\TravelRouteGuide\app\src\main\res\layout" />
+      <recent name="C:\Users\tachung\AndroidStudioProjects\TravelRouteGuide\app\src\main\res\xml" />
+      <recent name="C:\Users\tachung\AndroidStudioProjects\TravelRouteGuide\app\src\main\res\values" />
       <recent name="C:\Users\tachung\AndroidStudioProjects\TravelRouteGuide\app\src\main\res\drawable" />
+      <recent name="C:\Users\tachung\AndroidStudioProjects\TravelRouteGuide\app\src\main\res" />
+      <recent name="C:\Users\tachung\AndroidStudioProjects\TravelRouteGuide\app\src\main\res\raw" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\tachung\AndroidStudioProjects\TravelRouteGuide\app\src\main\res\layout" />
@@ -433,13 +425,21 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Android App.app" />
+      <item itemvalue="Android App.LoginPage" />
+      <item itemvalue="Android App.Route_Guide" />
+      <item itemvalue="Android App.Route_Guide (1)" />
+      <item itemvalue="Android App.Route_Guide (4)" />
+      <item itemvalue="Android App.Route_Guide (5)" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Android App.Route_Guide (5)" />
+        <item itemvalue="Android App.Route_Guide (4)" />
         <item itemvalue="Android App.Route_Guide (1)" />
         <item itemvalue="Android App.Route_Guide" />
         <item itemvalue="Android App.LoginPage" />
-        <item itemvalue="Android App.Route_Guide (5)" />
-        <item itemvalue="Android App.Route_Guide (4)" />
       </list>
     </recent_temporary>
   </component>
@@ -515,88 +515,8 @@
       <option name="project" value="LOCAL" />
       <updated>1655946615509</updated>
     </task>
-    <task id="LOCAL-00010" summary="commit">
-      <created>1655954185714</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1655954185714</updated>
-    </task>
-    <task id="LOCAL-00011" summary="commit">
-      <created>1655962494173</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1655962494173</updated>
-    </task>
-    <task id="LOCAL-00012" summary="commit">
-      <created>1655963764145</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1655963764145</updated>
-    </task>
-    <task id="LOCAL-00013" summary="commit">
-      <created>1655964018599</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1655964018599</updated>
-    </task>
-    <task id="LOCAL-00014" summary="commit">
-      <created>1655964746528</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1655964746528</updated>
-    </task>
-    <task id="LOCAL-00015" summary="commit">
-      <created>1655981658015</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1655981658090</updated>
-    </task>
-    <task id="LOCAL-00016" summary="commit">
-      <created>1655990192839</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1655990192839</updated>
-    </task>
-    <task id="LOCAL-00017" summary="commit">
-      <created>1655991354013</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1655991354013</updated>
-    </task>
-    <task id="LOCAL-00018" summary="commit">
-      <created>1655992473431</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1655992473431</updated>
-    </task>
-    <task id="LOCAL-00019" summary="commit">
-      <created>1656000010770</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1656000010770</updated>
-    </task>
-    <option name="localTasksCounter" value="20" />
+    <option name="localTasksCounter" value="10" />
     <servers />
-  </component>
-  <component name="Vcs.Log.History.Properties">
-    <option name="COLUMN_ID_ORDER">
-      <list>
-        <option value="Default.Root" />
-        <option value="Default.Author" />
-        <option value="Default.Date" />
-        <option value="Default.Subject" />
-      </list>
-    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
