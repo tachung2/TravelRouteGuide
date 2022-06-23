@@ -1,5 +1,6 @@
 package com.example.trg;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -23,6 +24,7 @@ public class Sign_up_second extends AppCompatActivity {
 
     private EditText username, password, passwordCheck;
     private Button round_next_signup_button;
+    private AlertDialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,10 +41,23 @@ public class Sign_up_second extends AppCompatActivity {
             public void onClick(View v) {
                 String email = username.getText().toString();
                 String Password = password.getText().toString();
-                String PasswordCheck = passwordCheck.getText().toString();
+                String Check = passwordCheck.getText().toString();
+
+                if (Password != Check) {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(Sign_up_second.this);
+                    dialog = builder.setMessage("비밀번호가 확인과 다릅니다.").setNegativeButton("확인", null).create();
+                    dialog.show();
+                    return;
+                }
+
+                if (email.equals("") || Password.equals("") || Check.equals("")) {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(Sign_up_second.this);
+                    dialog = builder.setMessage("모두 입력해주세요.").setNegativeButton("확인", null).create();
+                    dialog.show();
+                    return;
+                }
 
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
-
                     @Override
                     public void onResponse(String response) {
                         try {
@@ -62,6 +77,7 @@ public class Sign_up_second extends AppCompatActivity {
 
                 RegisterRequest registerRequest = new RegisterRequest(email, Password, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(Sign_up_second.this);
+                queue.add(registerRequest);
             }
         });
     }
