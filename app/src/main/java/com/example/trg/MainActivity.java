@@ -20,6 +20,7 @@ import com.kakao.sdk.user.model.Account;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.time.Instant;
 
 import android.widget.Button;
 
@@ -91,6 +92,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (oAuthToken != null) {
                 Log.i(TAG, "로그인 성공(토큰) : " + oAuthToken.getAccessToken());
                 getUserInfo();
+                Instant login = new Intent(MainActivity.this, )
             }
             return null;
         });
@@ -105,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (oAuthToken != null) {
                 Log.i(TAG, "로그인 성공(토큰) : " + oAuthToken.getAccessToken());
                 getUserInfo();
+
             }
             return null;
         });
