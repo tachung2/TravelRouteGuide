@@ -82,7 +82,9 @@
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.recyclerview:recyclerview:1.1.0@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.transition:transition:1.2.0@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.viewpager2:viewpager2:1.0.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.games:games-activity:1.0.0-rc01@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: de.hdodenhof:circleimageview:3.1.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.android.volley:volley:1.2.1@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.kakao.sdk:v2-user:2.10.0@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.kakao.sdk:v2-auth:2.10.0@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.kakao.sdk:v2-common:2.10.0@aar" level="project" />
