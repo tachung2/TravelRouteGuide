@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -35,6 +36,14 @@ public class Sign_up_second extends AppCompatActivity {
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
         passwordCheck = findViewById(R.id.passwordCheck);
+        ImageButton button = findViewById(R.id.backButton);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
         FloatingActionButton round_next_signup_button = findViewById(R.id.round_next_signup_button);
         round_next_signup_button.setOnClickListener(new View.OnClickListener() {

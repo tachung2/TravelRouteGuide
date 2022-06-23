@@ -61,7 +61,7 @@
             android:layout_marginBottom="10dp"
             android:textSize="20dp"
             android:orientation="horizontal"
-            android:text="어디로 가야할지 모를때 \n   필요한 여행 경로 추천"
+            android:text="어디로 가야할지 모를때 \n               여행 경로 추천"
             android:textColor="#ffff"
             android:textStyle="bold" />
 
@@ -75,17 +75,7 @@
             android:gravity="center"
             app:layout_constraintTop_toBottomOf="@+id/login" />
 
-        <android.widget.Button
-            android:id="@+id/button_login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/kakao_login_button"
-            android:drawableLeft="@drawable/kakao_button"
-            android:gravity="center"
-            android:paddingHorizontal="100dp"
-            android:text="카카오로 시작하기"
-            android:textSize="16dp"
-            android:textStyle="bold" />
+
 
 
         <LinearLayout

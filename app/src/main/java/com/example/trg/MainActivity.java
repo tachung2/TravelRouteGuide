@@ -13,10 +13,16 @@ import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.VideoView;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.toolbox.Volley;
+import com.kakao.sdk.auth.model.OAuthToken;
 import com.kakao.sdk.user.UserApiClient;
 import com.kakao.sdk.user.model.Account;
+import com.kakao.sdk.user.model.User;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -24,8 +30,17 @@ import java.time.Instant;
 
 import android.widget.Button;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import kotlin.Unit;
+import kotlin.jvm.functions.Function2;
+
 public class MainActivity extends AppCompatActivity {
 
+    private static final String TAG = "MainActivity";
+
+    private View loginButton;
     VideoView videoView;
     TextView login_textView;
     TextView signup_textView;
@@ -35,19 +50,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // 카카오 로그인
-        Button button = findViewById(R.id.button_login);
-        Log.d("KeyHash", getKeyHash());
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (UserApiClient.getInstance().isKakaoTalkLoginAvailable(MainActivity.this)) {
-                    login();
-                } else {
-                    accountLogin();
-                }
-            }
-        });
 
         // 배경 영상
         videoView = findViewById(R.id.videoview);
@@ -83,60 +85,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    // 로그인
-    public void login() {
-        String TAG = "login()";
-        UserApiClient.getInstance().loginWithKakaoTalk(MainActivity.this,(oAuthToken, error) -> {
-            if (error != null) {
-                Log.e(TAG, "로그인 실패", error);
-            } else if (oAuthToken != null) {
-                Log.i(TAG, "로그인 성공(토큰) : " + oAuthToken.getAccessToken());
-                getUserInfo();
 
-
-
-                Intent login = new Intent(MainActivity.this, GuidePage.class);
-                login.putExtra("user_id", email);
-            }
-            return null;
-        });
-    }
-
-    // 처음 로그인
-    public void accountLogin(){
-        String TAG = "accountLogin()";
-        UserApiClient.getInstance().loginWithKakaoAccount(MainActivity.this,(oAuthToken, error) -> {
-            if (error != null) {
-                Log.e(TAG, "로그인 실패", error);
-            } else if (oAuthToken != null) {
-                Log.i(TAG, "로그인 성공(토큰) : " + oAuthToken.getAccessToken());
-                getUserInfo();
-
-            }
-            return null;
-        });
-    }
-
-    // 유저 정보 요청 및 가져옴
-    public void getUserInfo(){
-        String TAG = "getUserInfo()";
-        UserApiClient.getInstance().me((user, meError) -> {
-            if (meError != null) {
-                Log.e(TAG, "사용자 정보 요청 실패", meError);
-            } else {
-                System.out.println("로그인 완료");
-                Log.i(TAG, user.toString());
-                {
-                    Log.i(TAG, "사용자 정보 요청 성공" +
-                            "\n회원번호: "+user.getId() +
-                            "\n이메일: "+user.getKakaoAccount().getEmail());
-                }
-                Account user1 = user.getKakaoAccount();
-                System.out.println("사용자 계정" + user1);
-            }
-            return null;
-        });
-    }
 
     // 배경 영상 반복재생 도와주는 함수 4개
     @Override
@@ -161,26 +110,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         videoView.stopPlayback();
         super.onDestroy();
-    }
-
-    // 카카오 로그인 시 필요한 해시키를 얻는 메소드
-    public String getKeyHash(){
-        try{
-            PackageInfo packageInfo = getPackageManager().getPackageInfo(getPackageName(), PackageManager.GET_SIGNATURES);
-            if(packageInfo == null) return null;
-            for(Signature signature: packageInfo.signatures){
-                try{
-                    MessageDigest md = MessageDigest.getInstance("SHA");
-                    md.update(signature.toByteArray());
-                    return android.util.Base64.encodeToString(md.digest(), Base64.NO_WRAP);
-                }catch (NoSuchAlgorithmException e){
-                    Log.w("getKeyHash", "Unable to get MessageDigest. signature="+signature, e);
-                }
-            }
-        }catch(PackageManager.NameNotFoundException e){
-            Log.w("getPackageInfo", "Unable to getPackageInfo");
-        }
-        return null;
     }
 
 
