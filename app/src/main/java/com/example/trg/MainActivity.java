@@ -92,7 +92,11 @@ public class MainActivity extends AppCompatActivity {
             } else if (oAuthToken != null) {
                 Log.i(TAG, "로그인 성공(토큰) : " + oAuthToken.getAccessToken());
                 getUserInfo();
-                Instant login = new Intent(MainActivity.this, )
+
+
+
+                Intent login = new Intent(MainActivity.this, GuidePage.class);
+                login.putExtra("user_id", email);
             }
             return null;
         });
