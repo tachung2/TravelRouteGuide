@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import net.daum.mf.map.api.MapView;
 
 
-public class MainActivity extends AppCompatActivity {
+public class Route_Guide extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
