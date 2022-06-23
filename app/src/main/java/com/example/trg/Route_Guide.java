@@ -19,7 +19,9 @@ import net.daum.mf.map.api.MapView;
 
 public class Route_Guide extends AppCompatActivity implements MapView.CurrentLocationEventListener, MapView.MapViewEventListener{
 
-    private static final String LOG_TAG = "MainActivity";
+    // private EditText search;
+
+    private static final String LOG_TAG = "Rout_Guide";
     private MapView mapView;
     private ViewGroup mapViewContainer;
     private static final int GPS_ENABLE_REQUEST_CODE = 2001;
@@ -29,6 +31,8 @@ public class Route_Guide extends AppCompatActivity implements MapView.CurrentLoc
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // search = findViewById(R.id.search);
 
         setContentView(R.layout.route_guide);
         //지도를 띄우자
@@ -44,6 +48,7 @@ public class Route_Guide extends AppCompatActivity implements MapView.CurrentLoc
             checkRunTimePermission();
         }
     }
+
 
     @Override
     protected void onDestroy() {
