@@ -45,4 +45,5 @@ dependencies {
     implementation "com.kakao.sdk:v2-navi:2.10.0" // 카카오내비
     implementation "com.squareup.retrofit2:retrofit:2.6.0"
     implementation "com.squareup.retrofit2:converter-gson:2.6.0"
+    implementation files('libs/libDaumMapAndroid.jar')
 }

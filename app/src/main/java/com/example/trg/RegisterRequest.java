@@ -11,10 +11,10 @@ import java.util.Map;
 
 public class RegisterRequest extends StringRequest {
 
+
     // 서버 URL 설정
     final static private String URL = "https://a782-27-117-234-165.jp.ngrok.io//trg/doJoin";
     private Map<String, String> map;
-
     public RegisterRequest(String user_id, String user_pw, Response.Listener<String> listener) {
         super(Method.POST, URL, listener, null);
 

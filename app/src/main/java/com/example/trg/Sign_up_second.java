@@ -73,9 +73,10 @@ public class Sign_up_second extends AppCompatActivity {
                                 String success = jsonObject.getString("response_type");
                                 if (success.equals("100")) {
                                     Toast.makeText(Sign_up_second.this, "회원 등록 성공", Toast.LENGTH_LONG).show();
-                                    Intent intent = new Intent(Sign_up_second.this, Sign_up_first.class);
+                                    Intent intent = new Intent(Sign_up_second.this, Route_Guide.class);
                                     intent.putExtra("user_id", email);
                                     startActivity(intent);
+                                    finish();
                                 }
                                 if (success.equals("101")) {
                                     Toast.makeText(Sign_up_second.this, "이미 가입한 아이디가 있습니다.", Toast.LENGTH_LONG).show();
